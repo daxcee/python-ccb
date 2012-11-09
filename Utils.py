@@ -84,8 +84,8 @@ def unloadDataFromObject(object):
   for name in object.attributes:
     attr=getattr(object,name)
     if type(attr) == unicode:
-      pass
-      #attr=attr.encode('raw_unicode_escape')
+      #pass
+      attr=attr.encode('raw_unicode_escape')
     data[name]=attr
   return data
 
